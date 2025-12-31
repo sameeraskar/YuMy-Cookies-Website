@@ -23,12 +23,9 @@ function initializeForm() {
         zip: document.getElementById('zip'),
         address: document.getElementById('address'),
         pickup: document.getElementById('pickup'),
-        miles: document.getElementById('miles'),
-        milesGroup: document.getElementById('miles-group'),
         quantity: document.getElementById('quantity'),
         orderDetails: document.getElementById('order-details'),
         notes: document.getElementById('notes'),
-        deliveryFee: document.getElementById('delivery-fee'),
         honeypot: document.querySelector('input[name="honeypot"]')
     };
 
@@ -40,10 +37,6 @@ function setupEventListeners() {
 
     formElements.zip.addEventListener('input', handleZipInput);
     formElements.zip.addEventListener('blur', validateZip);
-
-    formElements.pickup.addEventListener('change', handlePickupChange);
-
-    formElements.miles.addEventListener('input', updateDeliveryFee);
 
     formElements.quantity.addEventListener('input', validateQuantity);
     formElements.quantity.addEventListener('blur', validateQuantity);
@@ -70,25 +63,6 @@ function validateZip() {
 
     clearFieldError(formElements.zip);
     return true;
-}
-
-function handlePickupChange() {
-    const isPickup = formElements.pickup.checked;
-
-    if (isPickup) {
-        formElements.miles.value = '0';
-        formElements.milesGroup.style.display = 'none';
-    } else {
-        formElements.milesGroup.style.display = 'block';
-    }
-
-    updateDeliveryFee();
-}
-
-function updateDeliveryFee() {
-    const miles = parseFloat(formElements.miles.value) || 0;
-    const fee = miles * CONFIG.DELIVERY_FEE_PER_MILE;
-    formElements.deliveryFee.textContent = `$${fee.toFixed(2)}`;
 }
 
 function validateQuantity() {
@@ -233,8 +207,6 @@ async function handleFormSubmit(e) {
             zip: formElements.zip.value.trim(),
             address: formElements.address.value.trim() || 'Pickup',
             pickup: formElements.pickup.checked,
-            miles: formElements.pickup.checked ? 0 : parseFloat(formElements.miles.value) || 0,
-            deliveryFee: formElements.deliveryFee.textContent,
             quantity: formElements.quantity.value.trim(),
             orderDetails: formElements.orderDetails.value.trim(),
             notes: formElements.notes.value.trim() || 'None',
@@ -256,7 +228,6 @@ async function handleFormSubmit(e) {
         );
 
         form.reset();
-        updateDeliveryFee();
 
     } catch (error) {
         console.error('Form submission error:', error);
