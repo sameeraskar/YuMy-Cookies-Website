@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Place your custom cookie order. Orders must be placed 1 week in advance.">
+    <title>Order - Artisan Cookie Co.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="nav">
+    <div class="nav-container">
+        <a href="index.html" class="logo">
+            <img class="logo" src="./assets/banner_logo.png" alt="logo">
+        </a>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="order.html" class="nav-link active">Order</a>
+        </div>
+    </div>
+</nav>
+
+<main class="order-main">
+    <div class="order-container">
+        <h1 class="order-title">Place Your Order</h1>
+        <p class="order-intro">Fill out the form below to place your custom cookie order. We'll get back to you with confirmation within 24 hours.</p>
+
+        <div id="form-message" class="form-message" role="alert" aria-live="polite"></div>
+
+        <form id="order-form" class="order-form" novalidate>
+            <input type="text" name="honeypot" class="honeypot" tabindex="-1" autocomplete="off">
+
+            <fieldset class="form-section">
+                <legend class="section-legend">Contact Information</legend>
+
+                <div class="form-group">
+                    <label for="name" class="form-label">Name <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" class="form-input" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone" class="form-label">Phone <span class="required">*</span></label>
+                        <input type="tel" id="phone" name="phone" class="form-input" required placeholder="(555) 123-4567">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="your@email.com">
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset class="form-section">
+                <legend class="section-legend">Delivery Information</legend>
+
+                <div class="form-group">
+                    <label for="zip" class="form-label">ZIP Code <span class="required">*</span></label>
+                    <input type="text" id="zip" name="zip" class="form-input" required pattern="[0-9]{5}" maxlength="5" placeholder="12345">
+                    <p class="field-help">We deliver to select areas in the McKinney, TX region</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="address" class="form-label">Delivery Address <span class="required">*</span></label>
+                    <input type="text" id="address" name="address" class="form-input" placeholder="123 Main St, McKinney, TX 12345">
+                    <p class="field-help">Full street address including city and state</p>
+                </div>
+
+                <div class="pickup-option">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="pickup" name="pickup" class="form-checkbox">
+                        <span class="checkbox-text">I will pick up my order (no delivery fee)</span>
+                    </label>
+                </div>
+            </fieldset>
+
+            <fieldset class="form-section">
+                <legend class="section-legend">Order Details</legend>
+
+                <div class="form-group">
+                    <label for="quantity" class="form-label">Quantity (dozens) <span class="required">*</span></label>
+                    <input type="number" id="quantity" name="quantity" class="form-input" required min="12" step="12" value="12" placeholder="12">
+                    <p class="field-help">Must be in multiples of 12 (12, 24, 36, etc.)</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="order-details" class="form-label">Order Details <span class="required">*</span></label>
+                    <textarea id="order-details" name="orderDetails" class="form-textarea" required rows="5" placeholder="Example: 12 Dallas Cookies, 12 Oman Cookies, 12 Peru Cookies"></textarea>
+                    <p class="field-help">Please specify which cookies you'd like and in what quantities</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="notes" class="form-label">Additional Notes</label>
+                    <textarea id="notes" name="notes" class="form-textarea" rows="3" placeholder="Allergies, special requests, preferred delivery time, etc."></textarea>
+                </div>
+            </fieldset>
+
+            <div class="order-disclaimers">
+                <p class="disclaimer-text"><strong>Important:</strong></p>
+                <ul class="disclaimer-list">
+                    <li>Your order is not confirmed until you receive a confirmation email from the baker.</li>
+                    <li>Orders must be placed 1 week in advance.</li>
+                    <li>Payments must be made in full within 24 hours of confirmation.</li>
+                </ul>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="submit-btn" id="submit-btn">
+                    <span class="btn-text">Submit Order</span>
+                    <span class="btn-loader" aria-hidden="true"></span>
+                </button>
+            </div>
+        </form>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3 class="footer-heading">Contact</h3>
+            <p>Email: yumycookiesgfdf@gmail.com</p>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 YuMy Cookies. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="order.js"></script>
+</body>
+</html>
