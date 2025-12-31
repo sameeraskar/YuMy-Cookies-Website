@@ -200,27 +200,23 @@ async function handleFormSubmit(e) {
     submitBtn.classList.add('loading');
 
     try {
-        const formData = {
+        const formData = new URLSearchParams({
             name: formElements.name.value.trim(),
             phone: formElements.phone.value.trim(),
             email: formElements.email.value.trim() || 'Not provided',
             zip: formElements.zip.value.trim(),
-            address: formElements.address.value.trim() || 'Pickup',
+            address: formElements.address.value.trim(),
             pickup: formElements.pickup.checked,
             quantity: formElements.quantity.value.trim(),
             orderDetails: formElements.orderDetails.value.trim(),
             notes: formElements.notes.value.trim() || 'None',
             timestamp: new Date().toISOString()
-        };
+        });
 
         const response = await fetch(CONFIG.FORM_SUBMIT_URL, {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(formData)
+            body: formData
         });
-
 
         showFormMessage(
             'Thank you for your order! You should receive a confirmation email within 24 hours. Please check your spam folder if you don\'t see it.',
