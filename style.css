@@ -250,12 +250,12 @@ body {
 
 .cookie-card:nth-child(1) .cookie-image img {
     object-fit: contain;
-    padding: 1rem;
+    padding: 0.2rem;
 }
 
 .cookie-card:nth-child(2) .cookie-image img {
     object-fit: contain;
-    padding: 0.5rem;
+    padding: 0.3rem;
 }
 
 .cookie-card:nth-child(3) .cookie-image img {
@@ -274,12 +274,12 @@ body {
 
 .cookie-card:nth-child(6) .cookie-image img {
     object-fit: contain;
-    padding: 0.5rem;
+    padding: 0.3rem;
 }
 
 .cookie-card:nth-child(7) .cookie-image img {
     object-fit: cover;
-    padding: 0.5rem;
+    padding: 0.3rem;
 }
 
 .cookie-image img.loaded {
