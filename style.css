@@ -269,12 +269,14 @@ body {
 }
 
 .cookie-card:nth-child(5) .cookie-image img {
-    /*peru when image is sent*/
+    object-fit: contain;
+    padding: 0.0001rem;
+    margin-bottom: 25px;
 }
 
 .cookie-card:nth-child(6) .cookie-image img {
-    object-fit: contain;
-    padding: 0.3rem;
+    object-fit: cover;
+    padding: 0.5rem;
 }
 
 .cookie-card:nth-child(7) .cookie-image img {

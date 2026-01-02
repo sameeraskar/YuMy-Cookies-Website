@@ -1,6 +1,6 @@
 const cookieData = [
     {
-        name: "Dallas Cookie",
+        name: "Palestine Cookie",
         description: "White chocolate, dark chocolate, and pecans. It's a contrast thing—creamy meets bitter, smooth meets crunchy. The pecans add that toasted, buttery depth while the two chocolates balance each other out. Rich without being over the top, and honestly just really good if you're into that sweet-nutty-chocolatey situation.",
         ingredients: ["White chocolate", "Dark chocolate", "Plant butter", "Cane sugar", "Brown sugar", "Egg", "Vanilla extract", "Flour mix (rice flour, whole grain brown rice flour, sorghum flour, tapioca starch, potato starch, cellulose, vitamin and mineral blend, xanthin gum, cellulose gum)", "Corn starch", "Baking soda", "Baking powder", "Pecans"],
         image: "assets/dallas.png"
@@ -24,22 +24,22 @@ const cookieData = [
         image: "assets/damascus.png"
     },
     {
-        name: "Peru Cookie",
+        name: "Cairo Cookie",
         description: "Dark chocolate cookie loaded with white, dark, and milk chocolate chips, stuffed with marshmallow in the middle. It's basically a s'mores situation but make it a cookie. You get that gooey center, all three chocolates doing their thing, and it's rich without being one-note. For when you want dessert to feel like an actual experience and not just a snack.",
-        ingredients: ["(Add ingredients here)"],
+        ingredients: ["Flour mix (rice flour, whole grain brown rice flour, sorghum flour, tapioca starch, potato starch, cellulose, vitamin and mineral blend, xanthan gum, cellulose gum)", "Cocoa powder", "Salt", "Baking powder", "Plant butter", "Brown sugar", "Cane sugar", "Egg", "Vanilla (alcohol free)", "White chocolate chips", "Milk chocolate chips", "Dark chocolate chips", "Marshmallow (tapioca syrup, cane sugar, water, tapioca starch, carrageenan, soy protein, vanilla flavor)"],
         image: "assets/peru.png"
     },
     {
         name: "Tangier Cookie",
         description: "Ginger on ginger—a spiced ginger base with chopped ginger cookies folded in, plus white chocolate to balance the heat. It's warm, a little sharp, with that tingly ginger bite that actually means business. The white chocolate keeps it from being too intense but doesn't kill the vibe. If you like your cookies with some kick and actual spice, not just sweetness, this one's it.",
-        ingredients: ["(Add ingredients here)"],
+        ingredients: ["Honey cinnamon cookies (watermelon flour, cashew flour, sunflower seeds, flax seeds, arrowroot, coconut sugar, coconut oil, honey, honey extract, rosemary extract, sea salt, cream of tartar, vanilla extract)", "Cinnamon", "Ginger", "Evaporated coconut milk", "Brown sugar", "Plant butter", "Vegan white chocolate", "Cane sugar", "Egg", "Vanilla (alcohol free)", "Flour blend (rice flour, whole grain brown rice flour, sorghum flour, tapioca starch, potato starch, cellulose, vitamin and mineral blend, xanthan gum, cellulose gum)", "Baking soda", "Salt"],
         image: "assets/tangier.png"
     },
     {
         name: "Jenin Cookie",
         description: "Slivered almonds, shredded coconut, and white chocolate chips. It's textured—crunchy, chewy, with that toasted coconut-almond thing happening. Kind of tropical but not in an over-the-top way, just nutty and sweet with good contrast. If you're into cookies that aren't just soft and one-dimensional, this has actual bite to it.",
         ingredients: ["Plant butter", "Cane sugar", "Brown sugar", "Egg", "Vanilla extract", "Flour mix (rice flour, whole grain brown rice flour, sorghum flour, tapioca starch, potato starch, cellulose, vitamin and mineral blend, xanthan gum, cellulose gum)", "Baking soda", "Salt", "Chocolate chips", "Coconut", "Almonds"],
-        image: "assets/jenin.png"
+        image: "assets/jenin.PNG"
     }
 ];
 
