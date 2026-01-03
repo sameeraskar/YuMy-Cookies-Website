@@ -216,6 +216,23 @@ body {
     min-height: 280px;
 }
 
+.coming-soon-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-15deg);
+    background-color: var(--primary-pink);
+    color: white;
+    padding: 1rem 3rem;
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
 .cookie-card:nth-child(even) .cookie-card-inner {
     grid-template-columns: 1fr 300px;
 }
