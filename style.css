@@ -295,43 +295,39 @@ body {
     transition: background-color var(--transition-smooth);
 }
 
-.cookie-card:nth-child(odd):hover .cookie-card-inner {
+.cookie-card:hover .cookie-card-inner {
     background-color: var(--primary-pink);
 }
 
-.cookie-card:nth-child(even):hover .cookie-card-inner {
-    background-color: var(--light-pink);
-}
-
-.cookie-card:nth-child(odd):hover .cookie-content .cookie-name,
-.cookie-card:nth-child(odd):hover .cookie-content .cookie-description {
+.cookie-card:hover .cookie-content .cookie-name,
+.cookie-card:hover .cookie-content .cookie-description {
     color: white;
 }
 
-.cookie-card:nth-child(odd):hover .cookie-content .ingredients-list li {
+.cookie-card:hover .cookie-content .ingredients-list li {
     color: white;
 }
 
-.cookie-card:nth-child(odd):hover .cookie-content .ingredients-list li::before {
+.cookie-card:hover .cookie-content .ingredients-list li::before {
     color: black;
 }
 
-.cookie-card:nth-child(odd):hover .cookie-content .ingredients-toggle {
+.cookie-card:hover .cookie-content .ingredients-toggle {
     border-color: white;
     color: white;
 }
 
-.cookie-card:nth-child(odd):hover .cookie-content .ingredients-toggle:hover {
+.cookie-card:hover .cookie-content .ingredients-toggle:hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-.cookie-card:nth-child(odd):hover .cookie-content .order-now-btn {
+.cookie-card:hover .cookie-content .order-now-btn {
     background-color: white;
     color: var(--primary-pink);
     border-color: white;
 }
 
-.cookie-card:nth-child(odd):hover .cookie-content .order-now-btn:hover {
+.cookie-card:hover .cookie-content .order-now-btn:hover {
     background-color: var(--warm-white);
     box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
 }
