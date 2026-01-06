@@ -37,7 +37,7 @@ const cookieData = [
         image: "assets/tangier.png"
     },
     {
-        name: "Jenin Cookie",
+        name: "Beirut Cookie",
         description: "Slivered almonds, shredded coconut, and white chocolate chips. It's textured—crunchy, chewy, with that toasted coconut-almond thing happening. Kind of tropical but not in an over-the-top way, just nutty and sweet with good contrast. If you're into cookies that aren't just soft and one-dimensional, this has actual bite to it.",
         ingredients: ["Gluten-free flour mix (rice flour, whole grain brown rice flour, sorghum flour, tapioca starch, potato starch, cellulose, vitamin and mineral blend, xanthan gum, cellulose gum)", "Plant butter", "Organic cane sugar", "Organic brown sugar", "Organic pasture-raised egg", "Non-alcoholic vanilla extract", "Baking soda", "Salt", "Non GMO chocolate chips", "Organic coconut", "Organic almonds"],
         image: "assets/jenin.PNG"
