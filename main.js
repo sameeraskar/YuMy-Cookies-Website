@@ -27,8 +27,7 @@ const cookieData = [
         name: "Cairo Cookie",
         description: "Dark chocolate cookie loaded with white, dark, and milk chocolate chips, stuffed with marshmallow in the middle. It's basically a s'mores situation but make it a cookie. You get that gooey center, all three chocolates doing their thing, and it's rich without being one-note. For when you want dessert to feel like an actual experience and not just a snack.",
         ingredients: ["Gluten-free flour mix (rice flour, whole grain brown rice flour, sorghum flour, tapioca starch, potato starch, cellulose, vitamin and mineral blend, xanthan gum, cellulose gum)", "Organic cocoa powder", "Salt", "Organic baking powder", "Plant butter", "Organic brown sugar", "Organic cane sugar", "Organic pasture-raised egg", "Non-alcoholic vanilla", "Non GMO white chocolate chips", "Non GMO milk chocolate chips", "Non GMO dark chocolate chips", "Marshmallow (tapioca syrup, organic cane sugar, water, tapioca starch, carrageenan, soy protein, vanilla flavor)"],
-        image: "assets/peru.png",
-        comingSoon: true,
+        image: "assets/cairo.png",
     },
     {
         name: "Tangier Cookie",
@@ -66,7 +65,6 @@ function createCookieCard(cookie, index) {
     card.innerHTML = `
         <div class="cookie-card-inner">
             <div class="cookie-image">
-                ${cookie.comingSoon ? '<div class="coming-soon-overlay">Coming Soon</div>' : ''}
                 <img data-src="${cookie.image}" alt="${cookie.name}" loading="lazy">
             </div>
             <div class="cookie-content">
