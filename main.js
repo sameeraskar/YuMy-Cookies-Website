@@ -40,6 +40,12 @@ const cookieData = [
         description: "Slivered almonds, shredded coconut, and white chocolate chips. It's textured—crunchy, chewy, with that toasted coconut-almond thing happening. Kind of tropical but not in an over-the-top way, just nutty and sweet with good contrast. If you're into cookies that aren't just soft and one-dimensional, this has actual bite to it.",
         ingredients: ["Gluten-free flour mix (rice flour, whole grain brown rice flour, sorghum flour, tapioca starch, potato starch, cellulose, vitamin and mineral blend, xanthan gum, cellulose gum)", "Plant butter", "Organic cane sugar", "Organic brown sugar", "Organic pasture-raised egg", "Non-alcoholic vanilla extract", "Baking soda", "Salt", "Non GMO chocolate chips", "Organic coconut", "Organic almonds"],
         image: "assets/jenin.PNG"
+    },
+    {
+        name: "Ramadan Cookie",
+        description: "Pecan cookie stuffed with spiced date paste—cinnamon, nutmeg, and cardamom all working together. It’s got that maamool vibe, you know, the warm spices and sweet date filling situation, but with a modern twist. Naturally sweet without being too much, with buttery pecans adding crunch. Feels nostalgic and comforting in that way good spice blends do. If you know, you know.",
+        ingredients: ["Gluten-free flour mix (rice flour, whole grain brown rice flour, sorghum flour, tapioca starch, potato starch, cellulose, vitamin and mineral blend, xanthan gum, cellulose gum)", "Date paste (dates, cinnamon, nutmeg, cardamom, water)", "Non-alcoholic vanilla extract", "Organic pecans", "Organic baking powder", "Baking soda", "Organic corn starch", "Organic pasture-raised egg", "Organic brown sugar", "Organic turbinado sugar", "Plant butter"],
+        image: "assets/ramadan.png"
     }
 ];
 
