@@ -283,6 +283,11 @@ body {
     padding: 0.3rem;
 }
 
+.cookie-card:nth-child(8) .cookie-image img {
+    object-fit: contain;
+    padding: 0.3rem;
+}
+
 .cookie-image img.loaded {
     opacity: 1;
 }
