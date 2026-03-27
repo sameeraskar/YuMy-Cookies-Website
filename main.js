@@ -1,6 +1,6 @@
 const cookieData = [
     {
-        name: "Palestine Cookie",
+        name: "Palestine Cookie - $60/dozen",
         description: "White chocolate, dark chocolate, and organic pecans. It's a contrast thing—creamy meets bitter, smooth meets crunchy. The organic pecans add that toasted, buttery depth while the two chocolates balance each other out. Rich without being over the top, and honestly just really good if you're into that sweet-nutty-chocolatey situation.",
         ingredients: ["Gluten-free flour mix (rice flour, whole grain brown rice flour, sorghum flour, tapioca starch, potato starch, cellulose, vitamin and mineral blend, xanthan gum, cellulose gum)", "Non GMO white chocolate", "Non GMO dark chocolate", "Plant butter", "Organic cane sugar", "Organic brown sugar", "Organic pasture-raised egg", "Non-alcoholic vanilla extract", "Organic corn starch", "Baking soda", "Organic baking powder", "Organic pecans"],
         image: "assets/dallas.png"
