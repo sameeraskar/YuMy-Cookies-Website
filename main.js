@@ -6,43 +6,61 @@ const cookieData = [
         image: "assets/dallas.png"
     },
     {
-        name: "Oman Cookie",
+        name: "Oman Cookie - $36/dozen",
         description: "Organic cardamom-spiced and dipped in white chocolate. It's warm and aromatic with that slightly floral, citrusy thing organic cardamom does, then covered in smooth white chocolate that mellows it all out. Kind of unexpected but in a way that works. if you're into spiced cookies, this one hits all the notes.",
         ingredients: ["Gluten-free flour mix (rice flour, whole grain brown rice flour, sorghum flour, tapioca starch, potato starch, cellulose, vitamin and mineral blend, xanthan gum, cellulose gum)", "Organic almond flour", "Organic cane sugar", "Organic cardamom", "Salt", "Organic baking powder", "Organic pasture-raised egg", "Organic avocado oil"],
         image: "assets/oman.PNG"
     },
     {
-        name: "Dubai Cookie",
+        name: "Dubai Cookie - $60/dozen",
         description: "Pistachios on pistachios—loaded throughout, stuffed with pistachio paste in the center, then hit with dark chocolate. It's nutty, a little earthy, with that dark chocolate edge to keep it from being too sweet. Rich, intense, unapologetically green.",
         ingredients: ["Pistachio cream (Non GMO white chocolate, pistachio, organic cane sugar)", "Plant butter", "Organic cane sugar", "Organic brown sugar", "Organic pasture-raised egg", "Non-alcoholic vanilla extract", "Organic corn starch", "Baking soda", "Organic baking powder", "Non GMO dark chocolate", "Organic pistachios", "Gluten-free flour mix (rice flour, whole grain brown rice flour, sorghum flour, tapioca starch, potato starch, cellulose, vitamin and mineral blend, xanthan gum, cellulose gum)"],
         image: "assets/dubai.png"
     },
     {
-        name: "Damascus Cookie",
+        name: "Damascus Cookie - $36/dozen",
         description: "Straight-up lemon. Like, actually lemony—not just a hint. It's a crinkle cookie, so you get that crispy-chewy texture, but the real thing here is how bright and tart it is. Citrus fans only. If you're looking for something that cuts through the sweetness and wakes up your taste buds, this is the move.",
         ingredients: ["Gluten-free cake mix (organic cane sugar, tapioca starch, rice flour, organic corn starch, emulsifier, organic baking powder, salt, vanilla, xanthan gum)", "Organic lemon oil (lemon, sunflower oil)", "Organic avocado oil", "Organic pasture-raised egg"],
         image: "assets/damascus.png"
     },
     {
-        name: "Cairo Cookie",
+        name: "Cairo Cookie - $48/dozen",
         description: "Dark chocolate cookie loaded with white, dark, and milk chocolate chips, stuffed with marshmallow in the middle. It's basically a s'mores situation but make it a cookie. You get that gooey center, all three chocolates doing their thing, and it's rich without being one-note. For when you want dessert to feel like an actual experience and not just a snack.",
         ingredients: ["Gluten-free flour mix (rice flour, whole grain brown rice flour, sorghum flour, tapioca starch, potato starch, cellulose, vitamin and mineral blend, xanthan gum, cellulose gum)", "Organic cocoa powder", "Salt", "Organic baking powder", "Plant butter", "Organic brown sugar", "Organic cane sugar", "Organic pasture-raised egg", "Non-alcoholic vanilla", "Non GMO white chocolate chips", "Non GMO milk chocolate chips", "Non GMO dark chocolate chips", "Marshmallow (tapioca syrup, organic cane sugar, water, tapioca starch, carrageenan, soy protein, vanilla flavor)"],
         image: "assets/cairo.png",
     },
     {
-        name: "Tangier Cookie",
+        name: "Tangier Cookie - $36/dozen",
         description: "Ginger on ginger—a spiced ginger base with chopped ginger cookies folded in, plus white chocolate to balance the heat. It's warm, a little sharp, with that tingly ginger bite that actually means business. The white chocolate keeps it from being too intense but doesn't kill the vibe. If you like your cookies with some kick and actual spice, not just sweetness, this one's it.",
         ingredients: ["Honey cinnamon cookies (watermelon flour, cashew flour, sunflower seeds, flax seeds, arrowroot, coconut sugar, coconut oil, honey, honey extract, rosemary extract, sea salt, cream of tartar, vanilla extract)", "Organic cinnamon", "Organic ginger", "Evaporated coconut milk", "Organic brown sugar", "Plant butter", "Non GMO vegan white chocolate", "Organic cane sugar", "Organic pasture-raised egg", "Non-alcoholic vanilla", "Baking soda", "Salt", "Gluten-free flour blend (rice flour, whole grain brown rice flour, sorghum flour, tapioca starch, potato starch, cellulose, vitamin and mineral blend, xanthan gum, cellulose gum)"],
         image: "assets/tangier.png"
     },
     {
-        name: "Beirut Cookie",
+        name: "Beirut Cookie - $60/dozen",
         description: "Slivered almonds, shredded coconut, and white chocolate chips. It's textured—crunchy, chewy, with that toasted coconut-almond thing happening. Kind of tropical but not in an over-the-top way, just nutty and sweet with good contrast. If you're into cookies that aren't just soft and one-dimensional, this has actual bite to it.",
         ingredients: ["Gluten-free flour mix (rice flour, whole grain brown rice flour, sorghum flour, tapioca starch, potato starch, cellulose, vitamin and mineral blend, xanthan gum, cellulose gum)", "Plant butter", "Organic cane sugar", "Organic brown sugar", "Organic pasture-raised egg", "Non-alcoholic vanilla extract", "Baking soda", "Salt", "Non GMO chocolate chips", "Organic coconut", "Organic almonds"],
         image: "assets/jenin.PNG"
     },
     {
-        name: "Ramadan Cookie",
+        name: "Rocky Road Cookie - $36/dozen",
+        description: "Milk chocolate chips and stuffed with marshmallows. It’s the classic combo—chocolate and gooey marshmallow center that stretches when you pull it apart. Straightforward, nostalgic, hits that childhood dessert craving without trying too hard. If you want something familiar that just works, this is the one.",
+        ingredients: [
+            "Gluten-free flour mix (rice flour, whole grain brown rice flour, sorghum flour, tapioca starch, potato starch, cellulose, vitamin and mineral blend, xanthan gum, cellulose gum)",
+            "Plant butter",
+            "Organic cane sugar",
+            "Organic brown sugar",
+            "Organic pasture-raised egg",
+            "Non-alcoholic vanilla extract",
+            "Organic corn starch",
+            "Baking soda",
+            "Organic baking powder",
+            "Non GMO milk chocolate",
+            "Marshmallow (tapioca syrup, organic cane sugar, water, tapioca starch, carrageenan, soy protein, vanilla flavor)"
+        ],
+        image: "assets/placeholder.png"
+    },
+    {
+        name: "Ramadan Cookie - $60/dozen",
         description: "Pecan cookie stuffed with spiced date paste—cinnamon, nutmeg, and cardamom all working together. It’s got that maamool vibe, you know, the warm spices and sweet date filling situation, but with a modern twist. Naturally sweet without being too much, with buttery pecans adding crunch. Feels nostalgic and comforting in that way good spice blends do. If you know, you know.",
         ingredients: ["Gluten-free flour mix (rice flour, whole grain brown rice flour, sorghum flour, tapioca starch, potato starch, cellulose, vitamin and mineral blend, xanthan gum, cellulose gum)", "Date paste (dates, cinnamon, nutmeg, cardamom, water)", "Non-alcoholic vanilla extract", "Organic pecans", "Organic baking powder", "Baking soda", "Organic corn starch", "Organic pasture-raised egg", "Organic brown sugar", "Organic turbinado sugar", "Plant butter"],
         image: "assets/ramadan.png"
