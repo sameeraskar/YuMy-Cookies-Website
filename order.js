@@ -11,11 +11,38 @@ document.addEventListener('DOMContentLoaded', () => {
     const summaryTotal = document.getElementById('summary-total');
     const timestampInput = document.getElementById('timestamp');
     const form = document.getElementById('order-form');
+    const formMessage = document.getElementById('form-message');
+    const submitBtn = document.getElementById('submit-btn');
+    const btnText = submitBtn ? submitBtn.querySelector('.btn-text') : null;
 
     const selectedCookies = [];
 
     if (timestampInput) {
         timestampInput.value = new Date().toISOString();
+    }
+
+    function showMessage(message, type) {
+        if (!formMessage) return;
+
+        formMessage.textContent = message;
+        formMessage.className = `form-message ${type}`;
+        formMessage.style.display = 'block';
+        formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    function clearMessage() {
+        if (!formMessage) return;
+        formMessage.textContent = '';
+        formMessage.className = 'form-message';
+        formMessage.style.display = 'none';
+    }
+
+    function setSubmitting(isSubmitting) {
+        if (!submitBtn) return;
+        submitBtn.disabled = isSubmitting;
+        if (btnText) {
+            btnText.textContent = isSubmitting ? 'Submitting...' : 'Submit Order';
+        }
     }
 
     function parsePrice(cookieName) {
@@ -117,7 +144,85 @@ document.addEventListener('DOMContentLoaded', () => {
         cookieSelect.value = '';
         hiddenOrderDetails.setCustomValidity('');
         quantityInput.setCustomValidity('');
+        clearMessage();
         renderSelectedCookies();
+    }
+
+    function resetCookieSelection() {
+        selectedCookies.length = 0;
+        renderSelectedCookies();
+    }
+
+    async function submitForm(event) {
+        event.preventDefault();
+
+        if (timestampInput) {
+            timestampInput.value = new Date().toISOString();
+        }
+
+        if (selectedCookies.length === 0) {
+            hiddenOrderDetails.setCustomValidity('Please add at least one cookie to your order.');
+            hiddenOrderDetails.reportValidity();
+            return;
+        }
+
+        hiddenOrderDetails.setCustomValidity('');
+        quantityInput.setCustomValidity('');
+        updateHiddenFields();
+        clearMessage();
+
+        const actionUrl = form.getAttribute('action');
+        if (!actionUrl) {
+            showMessage('Form action URL is missing. Add your Google Script web app URL to the form action.', 'error');
+            return;
+        }
+
+        setSubmitting(true);
+
+        try {
+            const formData = new FormData(form);
+            const response = await fetch(actionUrl, {
+                method: 'POST',
+                body: formData
+            });
+
+            const rawText = await response.text();
+            let result = null;
+
+            try {
+                result = JSON.parse(rawText);
+            } catch (err) {
+                result = null;
+            }
+
+            if (!response.ok) {
+                throw new Error('The form could not be submitted.');
+            }
+
+            if (result && result.status === 'success') {
+                showMessage('Your order was submitted successfully. We will get back to you within 24 hours to confirm it.', 'success');
+                form.reset();
+                resetCookieSelection();
+
+                if (timestampInput) {
+                    timestampInput.value = new Date().toISOString();
+                }
+            } else if (result && result.message) {
+                throw new Error(result.message);
+            } else {
+                showMessage('Your order was submitted successfully. We will get back to you within 24 hours to confirm it.', 'success');
+                form.reset();
+                resetCookieSelection();
+
+                if (timestampInput) {
+                    timestampInput.value = new Date().toISOString();
+                }
+            }
+        } catch (error) {
+            showMessage(`There was a problem submitting your order. ${error.message}`, 'error');
+        } finally {
+            setSubmitting(false);
+        }
     }
 
     addCookieBtn.addEventListener('click', addSelectedCookie);
@@ -137,6 +242,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (selectedCookies[index]) {
             selectedCookies[index].dozens = value;
+            clearMessage();
             renderSelectedCookies();
         }
     });
@@ -146,26 +252,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const index = Number(event.target.dataset.index);
         selectedCookies.splice(index, 1);
+        clearMessage();
         renderSelectedCookies();
     });
 
-    form.addEventListener('submit', (event) => {
-        if (timestampInput) {
-            timestampInput.value = new Date().toISOString();
-        }
-
-        if (selectedCookies.length === 0) {
-            event.preventDefault();
-            hiddenOrderDetails.setCustomValidity('Please add at least one cookie to your order.');
-            hiddenOrderDetails.reportValidity();
-            return;
-        }
-
-        hiddenOrderDetails.setCustomValidity('');
-        quantityInput.setCustomValidity('');
-        updateHiddenFields();
-    });
+    form.addEventListener('submit', submitForm);
 
     populateCookieDropdown();
+    clearMessage();
     renderSelectedCookies();
 });
