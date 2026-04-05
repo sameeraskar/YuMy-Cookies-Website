@@ -57,7 +57,7 @@ const cookieData = [
             "Non GMO milk chocolate",
             "Marshmallow (tapioca syrup, organic cane sugar, water, tapioca starch, carrageenan, soy protein, vanilla flavor)"
         ],
-        image: "assets/placeholder.png"
+        image: "assets/rockyroad.png"
     },
     {
         name: "Ramadan Cookie - $60/dozen",
